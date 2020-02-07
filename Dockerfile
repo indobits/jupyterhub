@@ -13,7 +13,6 @@ RUN ln -sf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get install libgeos-dev libspatialindex-dev -y
 
-WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
@@ -22,7 +21,12 @@ RUN apt-get install nodejs
 RUN npm install -g npm@6.13.7
 RUN npm install -g configurable-http-proxy@4.2.0
 
-CMD openssl req -x509 -nodes -days 365 -newkey rsa:4096 \
-	-keyout certificates/key.pem -out certificates/cert.pem \
-	-subj '/CN=localhost' && \
-	jupyterhub -f .jupyter/config.py
+#RUN useradd --user-group --system --create-home --no-log-init app
+#USER app
+WORKDIR /app
+#COPY . .
+
+#CMD openssl req -x509 -nodes -days 365 -newkey rsa:4096 \
+#	-keyout certificates/key.pem -out certificates/cert.pem \
+#	-subj '/CN=localhost' && \
+CMD jupyterhub -f .jupyter/config.py

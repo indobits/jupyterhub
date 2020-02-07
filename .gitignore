@@ -1,3 +1,5 @@
+*.bkp
 *.key
 *.pem
+jupyterhub*
 notes.txt
