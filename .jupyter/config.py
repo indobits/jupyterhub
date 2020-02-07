@@ -999,8 +999,8 @@
 # underground
 
 c.Authenticator.admin_users = {'larellano'}
-c.JupyterHub.ssl_cert = '/app/certificates/cert.pem'
-c.JupyterHub.ssl_key = '/app/certificates/key.pem'
+#c.JupyterHub.ssl_cert = '/app/certificates/cert.pem'
+#c.JupyterHub.ssl_key = '/app/certificates/key.pem'
 c.LocalAuthenticator.create_system_users = True
 
 #c.JupyterHub.ip = '127.0.0.1'

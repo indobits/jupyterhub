@@ -22,7 +22,6 @@ run:
 		-it \
 		--rm \
 		-v $(PWD):/app:rw \
-		-p 443:443 \
 		-p 8888:8888 \
 		alicorp/jupyterhub:1.0
 
@@ -32,10 +31,6 @@ bash:
 		-it \
 		--rm \
 		-v $(PWD):/app:rw \
-		-p 443:443 \
 		-p 8888:8888 \
 		alicorp/jupyterhub:1.0 \
 		bash
-	#-v $(PWD):/app:rw \
-	#-v $(PWD)/data:/app/data:rw \
-	#-v $(PWD)/src:/app/src:rw \
