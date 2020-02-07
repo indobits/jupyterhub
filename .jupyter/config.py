@@ -1006,8 +1006,8 @@ c.LocalAuthenticator.create_system_users = True
 #c.JupyterHub.ip = '127.0.0.1'
 c.JupyterHub.ip = '0.0.0.0'
 #c.JupyterHub.ip = '*'
-c.JupyterHub.port = 443
-#c.JupyterHub.port = 8888
+#c.JupyterHub.port = 443
+c.JupyterHub.port = 8888
 
 #c.JupyterHub.proxy_cmd = ['/usr/bin/configurable-http-proxy']
 
